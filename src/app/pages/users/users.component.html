@@ -1,0 +1,88 @@
+<div class="row m-2">
+    <div class="m-3 ml-2 col-7">
+        <div class="card">
+            <div class="card-header bg-success">
+                <h4>User List</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Sr No</th>
+                                    <th>User Name</th>
+                                    <th>Password</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center" *ngFor="let user of userList;let sr= index">
+                                    <td> {{sr+1}}</td>
+                                    <td>
+                                        {{user.userName}}
+                                    </td>
+                                    <td>
+                                        {{user.password}}
+                                    </td>
+                                    <td>
+                                        {{user.role}}
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success m-2" (click)="onEdit(user)">Edit</button>
+                                        <button class="btn btn-sm btn-danger" (click)="onDelete(user)">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3  col-4">
+        <div class="card">
+            <div class="card-header bg-success">
+                <h4>User Entry Form</h4>
+            </div>
+            <form [formGroup]="formValue">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="userName">User Name</label>
+                            <input type="text" id="userName" class="form-control" formControlName="userName">
+                        </div>
+                        <div class="col-6">
+                            <label for="role">Select Role</label>
+                            <select class="form-control" formControlName="role" id="role">
+                                <option *ngFor="let s of role" [ngValue]="s">{{s}}</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" formControlName="password" id="password">
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-12 text-center">
+                            <button *ngIf="showAdd" class="btn btn-success m-2" (click)="onSaveUser()">Save
+                                User</button>
+                            <div>
+                                <button *ngIf="showUpdate" class="btn btn-success m-2" (click)="updateUser()">Update
+                                    User</button>
+                                <button *ngIf="showUpdate" class="btn btn-secondary"
+                                    (click)="resetForm()">Reset</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

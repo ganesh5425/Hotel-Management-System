@@ -1,0 +1,108 @@
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header bg-success">
+            <h4>New Booking</h4>
+        </div>
+    </div>
+    <form [formGroup]="formValue" class="design">
+        <div class="row mt-3">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="name">Name<span style="color: red">*</span></label>
+                        <input type="text" class="form-control" formControlName="name" id="name" />
+                    </div>
+                    <div class="col-3">
+                        <label for="mobile">Mobile<span style="color: red">*</span></label>
+                        <input type="number" class="form-control" maxlength="10" formControlName="mobileNo" id="mobileNo" />
+                    </div>
+                    <div class="col-3">
+                        <label>Email<span style="color: red">*</span></label>
+                        <input type="email" class="form-control" formControlName="email" id="email" />
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <label for="aadharNo">Aadhar No<span style="color: red">*</span></label>
+                        <input type="text" class="form-control" formControlName="aadharNo" id="aadharNo" />
+                    </div>
+                    <div class="col-3">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" formControlName="city" id="city" />
+                    </div>
+                    <div class="col-3">
+                        <label for="district">District</label>
+                        <input type="text" class="form-control" formControlName="district" id="district" />
+                    </div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-3">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" formControlName="state" id="state" />
+                    </div>
+                    <div class="col-3">
+                        <label for="country">Country</label>
+                        <input type="text" class="form-control" formControlName="country" id="country" />
+                    </div>
+                    <div class="col-3">
+                        <label for="pin">Pin Code</label>
+                        <input type="text" class="form-control" formControlName="pin" id="pin" />
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <label>Select Room<span style="color: red">*</span></label>
+                        <select class="form-control" formControlName="roomId" id="roomId">
+                            <option>Select Room</option>
+                            <option *ngFor="let room of roomList" [value]="room.id"> {{room.roomName}}</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="bookingFromDate">Booking From<span style="color: red">*</span></label>
+                        <input type="date" class="form-control" formControlName="bookingFromDate"
+                            id="bookingFromDate" />
+                    </div>
+                    <div class="col-3">
+                        <label for="bookingToDate">Booking To<span style="color: red">*</span></label>
+                        <input type="date" class="form-control" formControlName="bookingToDate" id="bookingToDate" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row mt-3">
+
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary btn-sm text-end pt-1" (click)="addGuest()">Add another Guest</button>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-16">
+                        <table class="table table-bordered ">
+                            <tbody>
+                                <tr *ngFor="let guest of bookingObj.hotelBookingDetails;let index= index">
+                                    <td class="">
+                                        <input type="text" class="form-control" formControlName="customerName"
+                                            placeholder="Name">
+                                    </td>
+                                    <td class="col-5">
+                                        <input type="text" class="form-control" formControlName="aadharCardNo"
+                                            placeholder="Aadhar No">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-success pt-1 pr-3 pl-3" (click)="removeGuest(index)">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-6 text-center">
+                <button class="btn btn-success text-center p-1" [disabled]="!formValue.valid" (click)="onSaveBooking()">Create New Booking</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+
+
+<nav class="navbar navbar-expand-sm navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand navd" routerLink="/dashboard"><img src="https://www.nicepng.com/png/detail/89-898495_house-logo-png-home-address-logo-png.png" height="20vh" class="mb-1 " width="30wh">Home</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/newBooking">New Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/bookings">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/rooms">Rooms</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/users"> Staff</a>
+          </li>
+        </ul>   
+      </div>
+      <h4>Hotel Management System</h4>
+      &nbsp;&nbsp;
+      <div>
+        
+        <input class="logout ml-3 p-1 pr-4 pl-4" type="button" (click)="this.showLogin.userLogout()" value="Logout">
+      </div>
+    </div>
+  </nav>
+  
+    <router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+<div class="row">
+    <!-- <div class="col-12 m-2  text-right">
+        <button ( class="btn btn-primary mr-3" data-toggle="modal" data-target="#exampleModal">Add New</button>
+
+    </div> -->
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Mobile no</th>
+                    <th>Email</th>
+                    <th>Aadhar</th>
+                    <th>Address</th>
+                    <th>Booking From</th>
+                    <th>Booking to</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let room of bookingList;let sr = index">
+                    <td class="text-center"> {{sr+1}}</td>
+                    <td class="text-center"> {{room.name}}</td>
+                    <td class="text-center"> {{room.mobileNo}}</td>
+                    <td class="text-center"> {{room.email}}</td>
+                    <td class="text-center"> {{room.aadharNo}}</td>
+                    <td class="text-center"> {{room.city}} {{room.district}} {{room.state}} {{room.country}} {{room.pin}}</td>
+                    <td class="text-center"> {{room.bookingFromDate}}</td>
+                    <td class="text-center"> {{room.bookingToDate}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,249 @@
+{
+  "signup": [
+    {
+      "id": "d357",
+      "name": "Ganesh Kumar",
+      "phone": 9876543210,
+      "email": "ganesh@gmail.com",
+      "username": "ganesh123",
+      "password": "Ganesh@123"
+    },
+    {
+      "id": "9593",
+      "name": "Prince Gupta",
+      "phone": 1234567890,
+      "email": "prince@mail.com",
+      "username": "prince987",
+      "password": "P@987"
+    }
+  ],
+  "GetAllRooms": [
+    {
+      "roomName": "King Size",
+      "isAcAvailable": true,
+      "roomCapacity": 3,
+      "isActive": null,
+      "roomTariff": 10000,
+      "extensionNo": "18",
+      "id": "91c5"
+    },
+    {
+      "roomName": "Single",
+      "isAcAvailable": false,
+      "roomCapacity": 2,
+      "isActive": true,
+      "roomTariff": 3000,
+      "extensionNo": "12",
+      "id": "b5e6"
+    },
+    {
+      "id": "f17d",
+      "roomName": "Double",
+      "isAcAvailable": true,
+      "roomCapacity": 4,
+      "isActive": true,
+      "roomTariff": 3250,
+      "extensionNo": "13"
+    },
+    {
+      "roomName": "Delux",
+      "isAcAvailable": true,
+      "roomCapacity": 5,
+      "isActive": true,
+      "roomTariff": 4000,
+      "extensionNo": "17",
+      "id": "15a1"
+    }
+  ],
+  "GetAllUsers": [
+    {
+      "userName": "Ganesh Rai",
+      "password": "Ganesh@123",
+      "role": "General Staff",
+      "id": "69fa"
+    },
+    {
+      "id": "bf24",
+      "userName": "Saurav Kumar",
+      "password": "Saurav@123",
+      "role": "Kitchen Staff"
+    },
+    {
+      "userName": "Prince Gupta",
+      "password": "Prince@123",
+      "role": "Management Staff",
+      "id": "3b41"
+    }
+  ],
+  "AllBooking": [
+    {
+      "id": "6460",
+      "name": "Saurav Kumar",
+      "mobileNo": "9876543210",
+      "email": "saurav@mail.com",
+      "aadharNo": "987654321012",
+      "city": "Patna",
+      "district": "Patna",
+      "state": "Bihar",
+      "country": "India",
+      "pin": "841002",
+      "roomId": "15a1",
+      "customerId": 0,
+      "bookingFromDate": "2024-01-23",
+      "bookingToDate": "2024-01-24",
+      "createdDate": "2024-01-22T15:07:03.133Z",
+      "bookingRate": 0,
+      "createdBy": 0,
+      "hotelBookingDetails": [
+        {
+          "bookingDetailId": 0,
+          "bookingId": 0,
+          "customerName": "Prince Gupta",
+          "aadharCardNo": "123456789012"
+        }
+      ]
+    },
+    {
+      "id": "4014",
+      "name": "Xcv",
+      "mobileNo": 2345642353,
+      "email": "vscvds@sdas.uuh",
+      "aadharNo": "23456754321",
+      "city": "sdfgds",
+      "district": "sfdgrf",
+      "state": "sfdghgfd",
+      "country": "dfsgdhfmngbf",
+      "pin": "23456754",
+      "roomId": "b5e6",
+      "customerId": "",
+      "bookingFromDate": "2024-01-24",
+      "bookingToDate": "2024-01-26",
+      "createdDate": "2024-01-23T07:15:20.500Z",
+      "bookingRate": 0,
+      "createdBy": "",
+      "hotelBookingDetails": [
+        {
+          "bookingDetailId": 0,
+          "bookingId": 0,
+          "customerName": "",
+          "aadharCardNo": ""
+        }
+      ]
+    },
+    {
+      "id": "8462",
+      "name": "asdsdcxzc",
+      "mobileNo": 987654321,
+      "email": "xcsds@sds.io",
+      "aadharNo": "123456543",
+      "city": "tfrdsresa",
+      "district": "ewsa",
+      "state": "dsa",
+      "country": "",
+      "pin": "",
+      "roomId": "b5e6",
+      "customerId": "",
+      "bookingFromDate": "2024-01-25",
+      "bookingToDate": "2024-01-25",
+      "createdBy": "",
+      "hotelBookingDetails": {
+        "bookingDetailId": 0,
+        "bookingId": 0,
+        "customerName": "atyrertre",
+        "aadharCardNo": "765431234543"
+      }
+    },
+    {
+      "id": "830c",
+      "name": "sdrtfdsd",
+      "mobileNo": 123456789876,
+      "email": "szdsd@gmai",
+      "aadharNo": "1234567898765432",
+      "city": "sdfgds",
+      "district": "Saran",
+      "state": "sfdghgfd",
+      "country": "India",
+      "pin": "841101",
+      "roomId": "b5e6",
+      "customerId": "",
+      "bookingFromDate": "2024-01-24",
+      "bookingToDate": "2024-01-26",
+      "createdBy": "",
+      "hotelBookingDetails": {
+        "bookingDetailId": 0,
+        "bookingId": 0,
+        "customerName": "seese",
+        "aadharCardNo": "1234567876543"
+      }
+    },
+    {
+      "id": "dcd5",
+      "name": "Riya",
+      "mobileNo": 9876543212,
+      "email": "ffstw@gsdx.com",
+      "aadharNo": "123456789012",
+      "city": "qwert",
+      "district": "qwerwe",
+      "state": "ASDF",
+      "country": "asdf",
+      "pin": "98765",
+      "roomId": "b5e6",
+      "customerId": "",
+      "bookingFromDate": "2024-01-25",
+      "bookingToDate": "2024-01-27",
+      "createdBy": "",
+      "hotelBookingDetails": {
+        "bookingDetailId": 0,
+        "bookingId": 0,
+        "customerName": "mansi",
+        "aadharCardNo": "1234567888998"
+      }
+    },
+    {
+      "id": "a2cb",
+      "name": "Abhi",
+      "mobileNo": 9876543210,
+      "email": "abhi@mail.com",
+      "aadharNo": "123456789012",
+      "city": "Kanpur",
+      "district": "Kanpur",
+      "state": "UP",
+      "country": "India",
+      "pin": "222345",
+      "roomId": "f17d",
+      "customerId": "",
+      "bookingFromDate": "2024-01-26",
+      "bookingToDate": "2024-01-30",
+      "createdBy": "",
+      "hotelBookingDetails": {
+        "bookingDetailId": 0,
+        "bookingId": 0,
+        "customerName": "Raj",
+        "aadharCardNo": "987654321098"
+      }
+    },
+    {
+      "id": "8835",
+      "name": "qwert",
+      "mobileNo": 1234567890,
+      "email": "gagfg@gdst.in",
+      "aadharNo": "123456789876",
+      "city": "",
+      "district": "",
+      "state": "",
+      "country": "",
+      "pin": "",
+      "roomId": "f17d",
+      "customerId": "",
+      "bookingFromDate": "2024-01-26",
+      "bookingToDate": "2024-01-28",
+      "createdBy": "",
+      "hotelBookingDetails": {
+        "bookingDetailId": 0,
+        "bookingId": 0,
+        "customerName": "dwwsd",
+        "aadharCardNo": "1234567890"
+      }
+    }
+  ]
+}

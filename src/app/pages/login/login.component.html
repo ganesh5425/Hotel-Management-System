@@ -1,0 +1,27 @@
+<div id="loginForm">
+  <form class="login" [formGroup]="login" #ref="ngForm" (ngSubmit)="ref.valid && logindata(login)">
+    <h2>Welcome Admin</h2>
+    <p>Please log in</p>
+
+    <div class="username">
+      <input type="text" formControlName="username" placeholder="User Name" />
+      <div *ngIf="username?.invalid && (username?.dirty || username?.touched || ref.submitted)" class="text-danger text-start">
+        <span *ngIf="username?.errors?.['required']">Username is required</span>
+        <span *ngIf="username?.errors?.['minlength']">Minimum 4 character is required</span>
+      </div>
+    </div>
+    <div class="password">
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="password?.errors?.['required']">Password is required</span>
+        <span *ngIf="password?.errors?.['minlength']">Minimum 5 character is required</span>
+      </div>
+
+    </div>
+    <input type="submit" value="Log In" />
+    <div class="links">
+      <p>New User Click here</p>
+      <a routerLink="/signup" (click)="showLogin.setLoginStatus(false)">Sign Up</a>
+    </div>
+  </form>
+</div>

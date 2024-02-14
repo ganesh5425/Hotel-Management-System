@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-12 m-2  text-right">
+        <button (click)="clickAddRoom()" class="btn btn-primary mr-3" data-toggle="modal" data-target="#exampleModal">Add New</button>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th>Sr No</th>
+                    <th>Room Name</th>
+                    <th>AC/Non-AC</th>
+                    <th>Capacity</th>
+                    <th>Active</th>
+                    <th>Tarrif</th>
+                    <th>Number of rooms</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let room of roomList;let sr = index">
+                    <td class="text-center"> {{sr+1}}</td>
+                    <td class="text-center"> {{room.roomName}}</td>
+                    <td class="text-center"> {{room.isAcAvailable?"AC":"Non-AC"}}</td>
+                    <td class="text-center"> {{room.roomCapacity}}</td>
+                    <td class="text-center"> {{room.isActive?"Available":"Unavailable"}}</td>
+                    <td class="text-center"> {{room.roomTariff}}</td>
+                    <td class="text-center"> {{room.extensionNo}}</td>
+                   
+                    <td class="text-center">
+                        <button class="btn btn-success btn-sm mx-2" data-toggle="modal" data-target="#exampleModal" (click)="saveRooms(room)">Update</button>
+                        <button class="btn btn-sm btn-danger" (click)="onDelete(room)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Room</h5>
+                        <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="formValue">
+                            <div class="form-group">
+                                
+                                <label for="roomName">Room Name</label>
+                                <input type="text" class="form-control" formControlName="roomName" id="roomName">
+                                <div class="form-group form-check mt-4">
+                                    <input type="checkbox" formControlName="isAcAvailable" class="form-check-input" id="isAcAvailable">
+                                    <label for="isAcAvailable">Ac</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="roomCapacity">Room Capacity</label>
+                                    <input type="number" formControlName="roomCapacity" class="form-control" id="roomCapacity">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" formControlName="isActive" class="form-check-input" id="isActive">
+                                    <label for="isActive">Room Active Status</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="roomTariff">Room Tariff</label>
+                                    <input type="number" formControlName="roomTariff" class="form-control" id="roomTariff">
+                                </div>
+                                <div class="form-group">
+                                    <label for="extensionNo">Number of Rooms</label>
+                                    <input type="text" formControlName="extensionNo" class="form-control" id="extensionNo">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" *ngIf="showAdd" (click)="addRoomDetails()" class="btn btn-primary">Add</button>
+                                <button type="button" *ngIf="showUpdate" (click)="updateRoomDetails()" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

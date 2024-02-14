@@ -1,0 +1,54 @@
+<div id="signupForm">
+    <form class="signup" [formGroup]="signup" #ref="ngForm" (ngSubmit)="ref.valid && signupdata(signup)">
+      <h2>Welcome, New User!</h2>
+      <p>Please Sign Up</p>
+      
+      <div class="input">
+      <input type="text" formControlName="name" placeholder="Name" />
+      <div
+        *ngIf="name?.invalid && (name?.dirty || name?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="name?.errors?.['required']">Name is required</span>
+        <span *ngIf="name?.errors?.['minlength']">Minimum 3 character is required</span>
+    </div>
+    </div>
+    <div class="input">
+      <input type="number" formControlName="phone"  placeholder="Phone" />
+      <div
+        *ngIf="phone?.invalid && (phone?.dirty || phone?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="username?.errors?.['required']">Phone is required</span>
+        <span *ngIf="username?.errors?.['minlength']">Minimum 10 digit is required</span>
+        <span *ngIf="username?.errors?.['maxlength']">Maximum 10 digit is required</span>
+        </div>
+    </div>
+    <div class="input">
+      <input type="email" formControlName="email" placeholder="Email" />
+      <div
+        *ngIf="email?.invalid && (email?.dirty || email?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="email?.errors?.['required']">Email is required</span>
+        <span *ngIf="email?.errors?.['email']">Invalid email</span>
+        </div>
+    </div>
+      <div class="input">
+        <input type="text" formControlName="username" placeholder="User Name" />
+        <div
+        *ngIf="username?.invalid && (username?.dirty || username?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="username?.errors?.['required']">Username is required</span>
+        <span *ngIf="username?.errors?.['minlength']">Minimum 4 character is required</span>
+        </div>
+      </div>
+      <div class="input">
+        <input type="password" formControlName="password" placeholder="Password" />
+        <div
+        *ngIf="password?.invalid && (password?.dirty || password?.touched || ref.submitted)" class="text-danger">
+        <span *ngIf="password?.errors?.['required']">Password is required</span>
+        <span *ngIf="password?.errors?.['minlength']">Minimum 5 character is required</span>
+      </div>
+        
+      </div>
+      <input type="submit" value="Sign Up" />
+      <div class="links">
+        <p>You Have Already Account</p>
+        <a routerLink="/login" (click)="showLogin.setLoginStatus(true)">Login</a>
+      </div>
+    </form>
+  </div>

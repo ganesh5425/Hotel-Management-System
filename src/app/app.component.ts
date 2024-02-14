@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SignUpService } from '../service/sign-up.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotel-booking';
+
+  signupService = inject(SignUpService);
+  showSignup:any = this.signupService.getIsLoggedIn();
+  
+  
 }

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+
+  background: #b28a8a; 
+  font-family: Raleway, sans-serif;
+  color: #666;
+}
+
+.signup {
+    margin: 50px auto;
+    padding: 30px 50px;
+    max-width: 330px;
+    border-radius: 5px;
+    background: #c3b5ac;
+    box-shadow: 1px 2px 1px #666;
+}
+  .signup input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.signup input[type=text],
+.signup input[type=number],
+.signup input[type=email],
+.signup input[type=password] {
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.signup input[type=text]:hover {
+  border-color: #F44336;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.signup input[type=submit] {
+  border: none;
+  background: #EF5350;
+  color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
+}
+
+.signup input[type=submit]:hover {
+  background: #F44336;  
+  opacity: 10;
+}
+
+  .signup h2 {
+    margin: 20px 0 0; 
+    color: #EF5350;
+    font-size: 28px;
+  }
+
+.signup p {
+  margin-bottom: 40px;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+.links p:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+.links a:hover {
+  color:blue;
+}
+
+  .signup h2,
+  .signup p,
+  .signup a {
+    text-align: center;    
+  }
+
+.signup a {
+  text-decoration: none;  
+  font-size: .9em;
+}
+
+.signup a:visited {
+  color: inherit;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+.signup{
+  margin: 50px auto;
+  padding: 30px 50px;
+  max-width: 380px;
+  border-radius: 5px;
+  background: #c3b5ac;
+  box-shadow: 1px 2px 1px #666;
+}
