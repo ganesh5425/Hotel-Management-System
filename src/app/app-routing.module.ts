@@ -9,10 +9,6 @@ import { NewBookingComponent } from './pages/new-booking/new-booking.component';
 import { BookingListComponent } from './pages/booking-list/booking-list.component';
 import { UsersComponent } from './pages/users/users.component';
 
-
-
-
-
 const routes: Routes = [
   {
     path:'',
